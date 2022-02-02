@@ -1,0 +1,313 @@
+1. Inicio
+2. funcion Principal
+3.	opcion, i[0, n] 
+4.	contador, i[0, n] < -- 0
+5.	mensaje, x(150)[{A-Z}, {a-z}, {0-n}, {BS}]
+6.	salida = True 
+	
+7. 	Mientras(salida) entonces
+9.	  Escribir "Ingrese\n"
+10.           "[1]para crear Facebook\n "
+11.           "[2]para crear Twitter\n "
+12.           "[3]para crear Whatsapp\n "
+13.           "[4]para crear Telegram\n "
+14.           "[5]para crear Signal\n "
+15.           "[6]para crear Instagram\n "
+16.           "[7]para crear Flickr\n"))
+17.	  Lea opcion 
+        
+18. 	  Si opcion <= 0 entonces
+19.            Escribir ("Error en opción seleccionada")
+
+20.	    Caso contrario
+21.		Si opcion == 1 entonces
+22.		  mensaje = crearFacebook()
+23.		  Escribir mensaje
+
+24.		  Caso contrario 
+25.		    Si opcion == 2 entonces
+26.		      mensaje = crearTwitter()
+27.		      Escribir mensaje
+		      
+28. 		      Caso contrario	
+29.			Si opcion == 3 entonces 
+30.			  mensaje = crearWhatsapp()
+31.			  Escribir mensaje
+			
+32.			  Caso contrario
+33.			    Si opcion == 4 entonces
+34.			      mensaje = crearTelegram()
+35.			      Escribir mensaje
+			
+36.			      Caso contrario
+37.			        Si opcion == 5 entonces
+38.			          mensaje = crearSignal
+39.			          Escribir mensaje
+
+40.			          Caso contrario
+41.			            Si opcion == 6 entonces
+42.				      mensaje = crearIstagram()
+43.				      Escribir mensaje
+		
+44.				      Caso contrario
+45.					Si opcion == 7 entonces
+46.					  mensaje = crearFlickr()
+47.					  Escribir mensaje
+					   
+48. 					  Caso contrario
+49.					    Si opcion > 7 entonces
+50.					      Escribir ("Error en opción seleccionada")
+51.
+52.					  Fin si
+53.				      Fin si
+54.				  Fin si
+55.			      Fin si
+56.			  Fin si
+57.		      Fin si
+58.		  Fin si 
+59.	    Fin si
+60.          FIN SI
+	contador = contador + 1
+
+61.	  salida = "Para seguir creando cuentas ingrese [1]\n. Para finalizar proceso ingrese [2]\n "
+	  
+62.	  Si salida == 1 entonces 
+63.	    salida = True 
+64.	    Caso contrario
+65.	      Si salida == 2 entonces
+66.	        salida = False
+67.		obtenerMensaje(contador)
+68.	        Caso contario
+69.		  Escribir "valor no válido"
+70.	        Fin si
+71.	    Fin si
+72.	  Fin si
+	  
+73.	  Fin Mientras 
+74. Fin funcion principal
+
+
+75.funcion crearFacebook()
+76.	username, x(50)[{A-Z}, {a-z}, {BS}, {0-n}]
+77.	edad, i[0, n] 
+78.	ciudad, x(50)[{A-Z}, {a-z}, {BS}]
+79.	pais, x(50)[{A-Z}, {a-z}, {BS}]
+80.	correo, x(100)[{A-Z}, {a-z}, {BS}, {0-n}, {@}]	
+81.	cadena, x(150)[{A-Z}, {a-z}, {BS}] <-- ""
+
+82.	Escribir "Creando Facebook"
+83.	Escribir "Ingrese su usuario "
+84.	Leer username
+	
+85.	Escribir "Ingrese su edad "
+86.	Leer edad 
+	
+87.	Escribir "Ingrese su ciudad de origen "
+88.	Leer ciudad
+	
+89.	Escribir "Ingrese su pais de origen "
+90.	Leer pais
+	
+91.	Escribir "Ingrese su correo electronico "
+92. 	Leer correo
+	
+93.	cadena = "\nFacebook creado\n"+username+"\n"+edad+"\n"+ciudad+"\n"+correo+"\n"
+94.	return cadena
+
+95.Fin funcion crearFacebook
+
+	
+96.funcion crearTwitter()
+97.	username, x(50)[{A-Z}, {a-z}, {BS}, {0-n}]
+98.	nombres, x(50)[{A-Z}, {a-z}, {BS}]
+99.	apellidos, x(50)[{A-Z}, {a-z}, {BS}]
+100.	edad, i[0, n] 
+101.	ciudad, x(50)[{A-Z}, {a-z}, {BS}]
+102.	pais, x(50)[{A-Z}, {a-z}, {BS}]
+103.	idioma, x(50)[{A-Z}, {a-z},]
+104.	correo, x(100)[{A-Z}, {a-z}, {BS}, {0-n}, {@}]
+105.	cadena, x(150)[{A-Z}, {a-z}, {BS}] <-- ""
+	
+106.	Escribir "Creando Twitter"
+107.	Escribir "Ingrese su usuario "
+108.	Leer username
+	
+109.	Escribir "Ingrese sus nombres "
+110.	Leer nombres
+	
+111.	Escribir "Ingrese sus apellidos "
+112.	Leer apellidos
+	
+113.	Escribir "Ingrese su ciudad de origen "
+114.	Leer ciudad
+	
+115.	Escribir "Ingrese su pais de origen "
+116.	Leer pais
+	
+117.	Escribir "Ingrese su idioma dominante "
+118.	Leer idioma
+	
+119.	Escribir "Ingrese su correo electronico "
+120.	Leer correo
+	
+121.	cadena = "\nTwitter creado\n"+username+"\n"+nombres+"\n"+apellidos+"\n"+str(edad)+"\n"+ciudad+"\n"+pais+"\n"+idioma+"\n"+correo+"\n"
+122.	return cadena
+
+123.Fin funcion crearTwitter()
+
+
+124.funcion crearWhatsApp()
+125.	username, x(50)[{A-Z}, {a-z}, {BS}, {0-n}]
+126.	numero, i[0, n] 
+127.	edad, i[0, n] 
+128.	ciudad, x(50)[{A-Z}, {a-z}, {BS}]
+129.	pais, x(50)[{A-Z}, {a-z}, {BS}]
+130.	cadena, x(150)[{A-Z}, {a-z}, {BS}] <-- ""
+
+131.	Escribir "Creando WhatsApp"
+132.	Escribir "Ingrese su usuario "
+133.	Leer username
+	
+134.	Escribir "Ingrese su número de teléfono "
+135.	Leer numero
+	
+136.	Escribir "Ingrese su edad "
+137.	Leer edad
+	
+138.	Escribir "Ingrese su ciudad de origen "
+139.	Leer ciudad
+	
+140.	Escribir "Ingrese su país de origen "
+141.	Leer pais
+	
+142.	cadena = "\nWhatsapp creado\n"+username+"\n"+str(numero)+"\n"+str(edad)+"\n"+ciudad+"\n"+pais+"\n"
+143.	return cadena
+
+144.Fin funcion crearWhatsApp()
+
+145.funcion crearTelegram()
+146.	username, x(50)[{A-Z}, {a-z}, {BS}, {0-n}]
+147.	numero, i[0, n] 
+148.	ciudad, x(50)[{A-Z}, {a-z}, {BS}]
+149.	pais, x(50)[{A-Z}, {a-z}, {BS}]
+150.	area, x(50)[{A-Z}, {a-z}, {BS}]
+151.	cadena, x(150)[{A-Z}, {a-z}, {BS}] <-- ""
+
+152.	Escribir "Creando Telegram"
+153.	Escribir "Ingrese su usuario "
+154.	Leer username
+	
+155.	Escribir "Ingrese su número de teléfono "
+156.	Leer numero
+	
+157.	Escribir "Ingrese su edad "
+158.	Leer edad
+	
+159.	Escribir "Ingrese su ciudad de origen "
+160.	Leer ciudad
+	
+161.	Escribir "Ingrese su país de origen "
+162.	Leer pais
+	
+163.	Escribir "Ingrese área de intéres"
+164.	Leer area
+
+165.	cadena = "\nTelegram creado\n"+username+"\n"+ str(numero)+"\n"+str(edad)+"\n"+ciudad+"\n"+pais+"\n"+area+"\n"
+166.	return cadena 
+	
+167.Fin funcion crearTelegram()
+
+168.funcion crearSignal()
+169.	username, x(50)[{A-Z}, {a-z}, {BS}, {0-n}]
+170.	numero, i[0, n] 
+172.	edad, i[0, n] 
+173.	ciudad, x(50)[{A-Z}, {a-z}, {BS}]
+174.	pais, x(50)[{A-Z}, {a-z}, {BS}]
+175.	hobby, x(50)[{A-Z}, {a-z}, {BS}]
+176.	cadena, x(150)[{A-Z}, {a-z}, {BS}] <-- ""
+
+177.	Escribir "Creando Signal"
+178.	Escribir "Ingrese su usuario "
+179.	Leer username
+	
+180.	Escribir "Ingrese su número de teléfono "
+181.	Leer numero
+	
+182.	Escribir "Ingrese su edad "
+183.	Leer edad
+	
+184.	Escribir "Ingrese su ciudad de origen "
+185.	Leer ciudad
+	
+186.	Escribir "Ingrese su país de origen "
+187.	Leer pais
+	
+188.	Escribir "Ingrese su hobby principal"
+189.	Leer hobby
+
+190.	cadena ="\nSignal creado\n"+username+"\n"+ str(numero)+"\n"+str(edad)+"\n"+ciudad+"\n"+pais+"\n"+hobby+"\n"
+191.	return cadena
+
+192.Fin funcion crearSignal()
+
+193.funcion crearInstagram()
+194.	username, x(50)[{A-Z}, {a-z}, {BS}, {0-n}]
+195.	edad, i[0, n] 
+196.	ciudad, x(50)[{A-Z}, {a-z}, {BS}]
+197.	correo, x(100)[{A-Z}, {a-z}, {BS}, {0-n}, {@}]	
+198.	cadena, x(150)[{A-Z}, {a-z}, {BS}] <-- ""
+
+199.	Escribir "Creando Instagram"
+200.	Escribir "Ingrese su usuario "
+201.	Leer username
+	
+202.	Escribir "Ingrese su edad "
+203.	Leer edad 
+	
+204.	Escribir "Ingrese su ciudad de origen "
+205.	Leer ciudad
+	
+206.	Escribir "Ingrese su correo electronico "
+207. 	Leer correo
+	
+208.	cadena = "\nInstagram creado\n" + username + "\n"+ str(edad) + "\n" + correo+"\n"
+209.	return cadena
+
+210.Fin funcion crearInstagram
+
+211.funcion crearFlickr()
+212.	username, x(50)[{A-Z}, {a-z}, {BS}, {0-n}]
+213.	correo, x(100)[{A-Z}, {a-z}, {BS}, {0-n}, {@}]	
+214.	cadena, x(150)[{A-Z}, {a-z}, {BS}] <-- ""
+
+215.	Escribir "Creando Flickr"
+216.	Escribir "Ingrese su usuario "
+217.	Leer username
+	
+218.	Escribir "Ingrese su correo electronico "
+219. 	Leer correo
+	
+220.	cadena = "\nFlickr creado\n"+username+"\n"+correo+"\n"
+221.	return cadena
+
+222.Fin funcion crearFlickr
+
+223.funcion obtenerMensaje(contador)
+224.	mensajeFinal(3), x(150)[{A-Z}, {a-z}, {BS}] <-- ["Campaña con poca afluencia", "Campaña moderada siga adelante", "Excelente Campaña"]
+	
+225.	Si contador >=1 AND contador <= 5 entonces
+226.	  Escribir mensajeFinal[0]
+	  
+227.	  Caso contrario
+228.	    Si contador>=6 and contador <=15 entonces
+229.	      Escribir mensajeFinal[1]
+
+230.	      Caso contrario
+231.		Si contador >= 16 entonces
+232.		  Escribir mensajeFinal[2]
+	      
+233.	      Fin si	
+234.	  Fin si
+235.	Fin si 
+
+236.Fin funcion obtenerMensaje 
